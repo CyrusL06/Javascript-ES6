@@ -63,7 +63,7 @@ if (guesList.includes(guesName))
 
 var guestInsert = Math.random();
 let output = " ";
-var guestNum = 9
+var guestNum = 15
     console.log(guestInsert);
 
 if (guestNum % 3 == 0 && guestNum % 5 == 0)
@@ -79,24 +79,6 @@ if (guestNum % 3 == 0 && guestNum % 5 == 0)
     console.log(output);
 }
 
-function addBuzz(num)
-{
-    if (num % 3)
-    {
-        console.log("Fizz")
-        if (num % 5)
-        {
-            console.log("FizzBuzz");
-        }
-    } else if (num % 5)
-    {
-        console.log("Buzz")
-        if (num % 3)
-        {
-            console.log("FizzBuzz");
-        }
-    }
-}
 
 console.log(guestNum);
 
