@@ -17,30 +17,39 @@ footer {
 }
 
 .w {
+  background-image: url(/4.DrumKit-Project/images/tom1.png);
+ 
+  
 
 }
 
 .a {
+  background-image: url(/4.DrumKit-Project/images/tom2.png);
 
 }
 
 .s {
+  background-image: url(/4.DrumKit-Project/images/tom2.png);
 
 }
 
 .d {
+  background-image: url(/4.DrumKit-Project/images/tom4.png);
 
 }
 
 .j {
+  background-image: url(/4.DrumKit-Project/images/snare.png);
 
 }
 
 .k {
+  background-image: url(/4.DrumKit-Project/images/crash.png);
 
 }
 
 .l {
+  background-image: url(/4.DrumKit-Project/images/kick.png);
 
 }
 
