@@ -9,12 +9,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 const app = express();
-const port = 3000;
+const port = 9000;
 
 // THIS!!
 app.use(bodyParser.urlencoded({extended: true}));
 //EVery single request has body
-
 app.get("/", (req, res) => {
 
             //All the path we want to access
