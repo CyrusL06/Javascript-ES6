@@ -17,6 +17,7 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+//Gets the initial data insisde...
 async function checkVisisted() {
   const result = await db.query("SELECT country_code FROM visited_countries");
 
