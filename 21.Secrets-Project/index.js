@@ -38,4 +38,4 @@ app.get("/", async (req, res) => {
 // 6. Listen on your predefined port and start the server.
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-});
+}); 
