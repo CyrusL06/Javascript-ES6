@@ -57,43 +57,58 @@ import ReactDOM from "react-dom";
 //Dynamically change the color of the h1 using inline css styles.
 //Morning = red, Afternoon = green, Night = blue.
 
- const currentTimeString = new Date().toLocaleTimeString();
- let hours;
- let message;
+//  const currentTimeString = new Date().toLocaleTimeString();
+//  let hours;
+//  let message;
 
- const customStyle = {
-    color: "",
- }
+//  const customStyle = {
+//     color: "",
+//  }
 
-function getCurrent24htTime(){
-    const now = new Date();
+// function getCurrent24htTime(){
+//     const now = new Date();
 
-    hours = now.getHours();
-    hours = hours < 10 ? "0" + hours: hours;
+//     hours = now.getHours();
+//     hours = hours < 10 ? "0" + hours: hours;
 
-    console.log(hours);
+//     console.log(hours);
 
-    if(hours < 12 ) //hours less than 12
-    {
-        message = "Good Morning";
-        customStyle.color="red";
-    } else if (hours === 12 || hours < 18)
-    {
-        message = "Good Afternoon";
-        customStyle.color="green"
-    } else {
-        message = "Good Evening";
-        customStyle.color="blue"
+//     if(hours < 12 ) //hours less than 12
+//     {
+//         message = "Good Morning";
+//         customStyle.color="red";
+//     } else if (hours === 12 || hours < 18)
+//     {
+//         message = "Good Afternoon";
+//         customStyle.color="green"
+//     } else {
+//         message = "Good Evening";
+//         customStyle.color="blue"
 
-    }
- }
+//     }
+//  }
 
-getCurrent24htTime();
+// getCurrent24htTime();
+
+// ReactDOM.render(
+//     <div>
+//         <h1 style={customStyle}>{message} + {hours}</h1>
+//     </div>, 
+//     document.getElementById("root")
+// );
+
+
+
+//--------------------------------
+
+//PT.4
+
+import Heading from "./Heading.jsx";
+import List from "./List.jsx"
 
 ReactDOM.render(
-    <div>
-        <h1 style={customStyle}>{message} + {hours}</h1>
-    </div>, 
-    document.getElementById("root")
-);
-
+	<div>
+		<Heading />
+		<List />
+	</div>
+	,document.getElementById("root"));
