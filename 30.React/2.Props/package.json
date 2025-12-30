@@ -1,12 +1,12 @@
 {
-  "name": "keeper-app-part-1-starting",
+  "name": "react-props",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
