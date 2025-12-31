@@ -1,19 +1,31 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <div>
-    <h1>My Contacts</h1>
 
-    <h2>Beyonce</h2>
+function Card(props){
+  return <div>
+    <h2>{props.name}</h2>
     <img
       src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
       alt="avatar_img"
     />
-    <p>+123 456 789</p>
-    <p>b@beyonce.com</p>
+    <p>{props.phone}</p>
+    <p>{props.email}</p>
+  </div>
+}
 
-    <h2>Jack Bauer</h2>
+
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <div>
+    <h1>My Contacts</h1>
+
+   <Card name="Beyonce" phone="+123 456 789" email="b@beyonce.com"/>
+     <input id = "fname" placeholder="firstName"/> 
+
+    <Card />
+
+    {/* <h2>Jack Bauer</h2>
     <img
       src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"
       alt="avatar_img"
@@ -27,7 +39,6 @@ ReactDOM.render(
       alt="avatar_img"
     />
     <p>+918 372 574</p>
-    <p>gmail@chucknorris.com</p>
-  </div>,
-  document.getElementById("root")
+    <p>gmail@chucknorris.com</p> */}
+  </div>
 );
