@@ -2,11 +2,11 @@
 //<h1> for a title and a <p> for the content.
 import React from "react";
 
-    function Notes()
+    function Notes(props)
     {
         return <div className="note">
-                <h1>Try</h1>
-                <p>Hi</p>
+                <h1>{props.title}</h1>
+                <p>{props.content}</p>
               </div>
     }
 
