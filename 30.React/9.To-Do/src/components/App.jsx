@@ -4,7 +4,7 @@ import React, { useState } from "react";
 //2. When the add button is pressed, the current data in the input should be
 //added to an array.
 //3. The <ul> should display all the array items as <li>s
-
+import ToDoItem from "./ToDoItem";
 
 
 function App() {
@@ -43,7 +43,8 @@ function App() {
       <div>
         <ul>
        { todos.map((todoItem) => {
-          return <li>{todoItem}</li>
+          return <ToDoItem 
+                  text = {todoItem}/>
        })}
       </ul>
       </div>
