@@ -3,25 +3,55 @@ import React, { useState } from "react";
 function App() {
 
   //Set the two states:
-  const [FNAME, SETFNAME] = useState("");
-  const [LNAME, SETLNAME] = useState("");
+  // const [FNAME, SETFNAME] = useState("");
+  // const [LNAME, SETLNAME] = useState("");
 
-  function fChanged()
-  {
-    SETFNAME(event.target.value);
-  }
+  const [fullName, setFullName] = useState({
+    FNAME: "",
+    LNAME: ""
+  })
 
-   function LChanged()
-  {
-    SETLNAME(event.target.value);
+  // function fChanged()
+  // {
+  //   SETFNAME(event.target.value);
+  // }
+
+  //  function LChanged()
+  // {
+  //   SETLNAME(event.target.value);
+  // }
+
+  function Changed(event){
+    // const inputName = event.target.name
+    // const inputValue = event.target.value;
+
+    //Object destructuring...
+    const { value, name} = event.target;
+
+    setFullName((prevValue)=>{
+      if(inputName === "fName")
+      {
+        return {
+          FNAME: inputValue,
+          LNAME: prevValue.LNAME
+        }
+      } else if(inputName === "lName")
+      {
+        return {
+          FNAME: prevValue.FNAME,
+          LNAME: inputValue
+        }
+      }
+    })
+
   }
 
   return (
     <div className="container">
-      <h1>Hello {FNAME} {LNAME}</h1>
+      <h1>Hello {fullName.FNAME} {fullName.LNAME}</h1>
       <form>
-        <input onChange={fChanged} name="fName" placeholder="First Name" value={FNAME} />
-        <input onChange={LChanged} name="lName" placeholder="Last Name" value={LNAME}/>
+        <input onChange={Changed} name="fName" placeholder="First Name" value={fullName.FNAME} />
+        <input onChange={Changed} name="lName" placeholder="Last Name" value={fullName.LNAME}/>
         <button>Submit</button>
       </form>
     </div>
