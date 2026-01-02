@@ -32,7 +32,7 @@ function App() {
       if(inputName === "fName")
       {
         return {
-          FNAME: inputValue,
+          FNAME: value,
           LNAME: prevValue.LNAME
         }
       } else if(inputName === "lName")
