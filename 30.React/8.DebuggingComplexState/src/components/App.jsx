@@ -23,27 +23,33 @@ function App() {
     const {name, value} = event.target;
 
    setContact( pvalue => {
-     if(name === "fName")
-    {
-      return{
-           fName: value,
-           lName: pvalue.lName,
-           email: pvalue.email
-      };
-    } else if (name === "lName")
-    {
-      return{
-           fName: pvalue.fName,
-           lName: value,
-           email: pvalue.email
-      };
-    } else if( name === "email"){
-      return{
-           fName: pvalue.fName,
-           lName: pvalue.lName,
-           email: value
-      };
+
+    return{
+      ...pvalue,
+      [name]: value
     }
+
+    //  if(name === "fName")
+    // {
+    //   return{
+    //        fName: value,
+    //        lName: pvalue.lName,
+    //        email: pvalue.email
+    //   };
+    // } else if (name === "lName")
+    // {
+    //   return{
+    //        fName: pvalue.fName,
+    //        lName: value,
+    //        email: pvalue.email
+    //   };
+    // } else if( name === "email"){
+    //   return{
+    //        fName: pvalue.fName,
+    //        lName: pvalue.lName,
+    //        email: value
+    //   };
+    // }
    })
   }
 
