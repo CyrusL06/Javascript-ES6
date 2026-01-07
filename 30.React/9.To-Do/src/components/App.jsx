@@ -26,8 +26,14 @@ function App() {
     })
     setInputText("");
 
-
   }
+
+  function deleteItem(){
+    setItems(prevsItem => {
+
+    })
+  }
+
 
   return (
     <div className="container">
@@ -41,10 +47,14 @@ function App() {
         </button>
       </div>
       <div>
-        <ul>
-       { todos.map((todoItem) => {
+        <ul>  
+                              {/* avises un not to use index */}
+                              {/* {UUID} */}
+       { todos.map((todoItem, index) => {
           return <ToDoItem 
-                  text = {todoItem}/>
+                key={index}
+                text = {todoItem}
+                onCheck={deleteItem}/>
        })}
       </ul>
       </div>
