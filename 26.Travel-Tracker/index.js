@@ -61,7 +61,7 @@ app.post("/add", async (req, res) => {
   const countryCode = data.country_code;
   // console.log(countryCode);
 
-  await db.query("INSERT INTO visited_countries (country_code) VALUES ($1)", [countryCode]);
+  await db.query("INSERT INTO visited_countries (country_code) VALUES ($1)",[countryCode]);
   res.redirect("/");
   }
 });
